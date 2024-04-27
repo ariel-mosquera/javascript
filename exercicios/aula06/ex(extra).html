@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Exercicio</title>
+    <style>
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-indent: 5px;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Teste de acesso</h1>
+
+    <script>
+        var idade = Number(window.prompt('Qual é a sua idade? '))
+        var res = idade => 18 ? 'Acesso aprovado' : 'Acesso negado'
+        document.write(`<p>${res}</p>`)
+    </script>
+</body>
+</html>
