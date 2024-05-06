@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Grotesca</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 5px;
+        }
+
+        div.container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        div#res {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora Vergonhosa</h1>
+    <div class="container">
+        <div class="box">
+            <input type="number" name="tn1" id="tn1">
+            <input type="number" name="tn2" id="tn2">
+            <input type="button" value="Operar" onclick="igual()">
+        </div>
+    </div>
+
+    <div class="box" id="res">
+        <strong>Resultado:</strong>
+    </div>
+    
+    <script>
+        function igual() {
+            var tn1 = window.document.getElementById('tn1')
+            var tn2 = window.document.getElementById('tn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            var m = n1 * n2
+            var d = n1 / n2
+            var p = n1 ** n2
+            res.innerHTML = `<p>A soma entre ${n1} e ${n2} é igual a ${s}</p> 
+            <p>A multiplicação de ${n1} por ${n2} é igual a ${m}</p> 
+            <p>A divisão de ${n1} entre ${n2} é igual a ${d}</p> 
+            <p>A potencia de ${n1} elevado a ${n2} é igual a ${p}</p>`
+        }
+
+
+
+    </script>
+</body>
+</html>
