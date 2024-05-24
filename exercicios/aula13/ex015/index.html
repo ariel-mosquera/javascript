@@ -8,16 +8,23 @@
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Verificador de idade</h1>
     </header>
     <section>
         <div>
-            <form action="" method="post">
-                <label for="idade"></label>
+            <form action="#" method="post">
+                <label for="ano">Ano de nascimento:</label>
+                <input type="number" name="ano" id="iano" min="1900"><br>
+                <label for="sexo">Sexo:</label>
+                <input type="radio" name="radsex" id="mas" checked>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label><br>
+                <input type="button" value="Verificar" onclick="verificar()">
             </form>
         </div>
-        <div>
-            olá...
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
         </div>
     </section>
     <footer>
